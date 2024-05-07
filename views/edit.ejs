@@ -1,0 +1,17 @@
+<!-- views/edit.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Post</title>
+</head>
+<body>
+    <h1>Edit Post</h1>
+    <form action="/edit/<%= post._id %>?_method=POST" method="POST">
+        <input type="text" name="post[title]" placeholder="Title" value="<%= post.title %>" required>
+        <textarea name="post[content]" placeholder="Content" required><%= post.content %></textarea>
+        <button type="submit">Update</button>
+    </form>
+</body>
+</html>
